@@ -1,4 +1,4 @@
-name: Vue 3.1 CI/CD
+name: Vue 3 CI/CD
 
 on: [push, workflow_dispatch]
 
