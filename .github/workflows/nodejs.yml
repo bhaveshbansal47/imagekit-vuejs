@@ -20,9 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: |
-          npm install --save ../../
-          npm install
+        run: npm install
 
       - name: Build and test
         run: |
@@ -67,7 +65,8 @@ jobs:
         run: |
           cd tests/test-app
           echo VUE_APP_URL_ENDPOINT = ${{ secrets.ik_url_endopint }} > .env;
-          npm install 
+          npm install
+          npm install --save ../../
           npm run build
 
       - name: Start the app and run E2E tests
